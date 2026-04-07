@@ -66,9 +66,27 @@ for(let i=1;i<data.length;i++){
 if(data[i][0].toUpperCase()===rego){
 
 document.getElementById("result").innerHTML =
-"Expiry Date: " + data[i][1] + "<br>" +
-"Service A: " + data[i][2] + "<br>" +
-"Service B: " + data[i][3];
+"Expiry Date: " + for(let i = 0; i < data.length; i++) {
+    document.getElementById("result").innerHTML += `
+      <strong>Expiry Date:</strong> ${formatServiceValue(data[i][1])}<br>
+      <strong>Service A:</strong> ${formatServiceValue(data[i][2])}<br>
+      <strong>Service B:</strong> ${formatServiceValue(data[i][3])}<br><br>
+    `;
+} + "<br>" +
+"Service A: " + for(let i = 0; i < data.length; i++) {
+    document.getElementById("result").innerHTML += `
+      <strong>Expiry Date:</strong> ${formatServiceValue(data[i][1])}<br>
+      <strong>Service A:</strong> ${formatServiceValue(data[i][2])}<br>
+      <strong>Service B:</strong> ${formatServiceValue(data[i][3])}<br><br>
+    `;
+}] + "<br>" +
+"Service B: " + for(let i = 0; i < data.length; i++) {
+    document.getElementById("result").innerHTML += `
+      <strong>Expiry Date:</strong> ${formatServiceValue(data[i][1])}<br>
+      <strong>Service A:</strong> ${formatServiceValue(data[i][2])}<br>
+      <strong>Service B:</strong> ${formatServiceValue(data[i][3])}<br><br>
+    `;
+};
 
 return;
 
