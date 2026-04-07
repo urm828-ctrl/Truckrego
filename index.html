@@ -53,7 +53,9 @@ let data=[];
 fetch(sheetURL)
 .then(res=>res.text())
 .then(text=>{
-let rows=text.split("\n").map(r=>r.split(","));
+let rows = text.split("\n").map(r =>
+  r.match(/(".*?"|[^",\s]+)(?=\s*,|\s*$)/g)
+);
 data=rows;
 });
 
